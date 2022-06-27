@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Navigate selection options</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            border: 1px solid black;
+            
+        }
+        #status {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="add">+</button>   
+    <!--<button id="debug-btn">debug</button>-->
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Ref<span title="for example: 'https://somesite/${selectionText}', where ${selectionText} will be replaced with selected on page text.">*</span></td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+        
+
+    <div id="status"></div>
+    <button id="save">Save</button>
+
+
+    <template id="row-template">
+        <tr>
+            <td class="td-id"><input id="id" type="text" disabled> </td>
+            <td class="td-name"><input id="name" type="text"> </td>
+            <td class="td-ref"><textarea id="ref" cols="50" rows="3" ></textarea> </td>
+            <td class="td-del"><button id="remove">-</button> </td>
+        </tr>
+    </template>
+
+
+    <script src="options.js"></script>
+
+
+
+</body>
+</html>
+
